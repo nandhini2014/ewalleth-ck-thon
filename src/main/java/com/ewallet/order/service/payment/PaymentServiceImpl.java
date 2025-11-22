@@ -14,8 +14,10 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class PaymentServiceImpl implements PaymentService {
 
-    private final WalletRepository walletRepository;
-    private final MerchantRepository merchantRepository;
+    @Autowired
+    private WalletRepository walletRepository;
+    @Autowired
+    private MerchantRepository merchantRepository;
 
     @Override
     @Transactional
